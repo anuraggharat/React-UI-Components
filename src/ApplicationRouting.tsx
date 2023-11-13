@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route,Routes} from 'react-router-dom'
 import Home from './pages/Home'
-import ModalPage from './pages/uicomponents/ModalPage'
+import ModalPage from './pages/uicomponents/Modal/ModalPage'
 export default function ApplicationRouting() {
   return (
     <Router>
