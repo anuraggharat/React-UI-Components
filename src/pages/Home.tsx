@@ -3,9 +3,24 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <div>
-        <Link to={'/components/modal'}>Modal</Link>
-        <Link to={'/components/slidemodal'}>Slide Modal</Link>
+    <div className='min-h-screen w-full bg-slate-50 p-32'>
+      <div>
+        <h1 className='text-xl'>React Components</h1>
+        <ul className='mt-10 list-disc pl-4'>
+          <li className='text-blue-700 hover:text-blue-800 hover:underline transition-all duration-500'>
+          <Link to={'/components/modal'}>Modal</Link>
+          </li>
+          <li className='text-blue-700 hover:text-blue-800 hover:underline transition-all duration-500'>
+          <Link to={'/components/slidemodal'}>Slide Modal</Link>
+          </li>
+          <li className='text-blue-700 hover:text-blue-800 hover:underline transition-all duration-500'>
+          <Link to={'/components/collapseFolders'}>Collapsing Folders</Link>
+          </li>
+          <li className='text-blue-700 hover:text-blue-800 hover:underline transition-all duration-500'>
+          <Link to={'/components/pagination'}>Pagination</Link>
+          </li>
+        </ul>
+      </div>
 
     </div>
   )
