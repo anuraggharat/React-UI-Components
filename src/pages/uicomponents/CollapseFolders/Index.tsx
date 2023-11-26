@@ -48,9 +48,9 @@ const entries = [
 
 export default function Index() {
   return (
-    <div className='flex flex-col justify-center min-w-full items-center min-h-screen'>
-        <div>
-        {entries.map((entry)=>(<DataItem entry={entry} depth={1}/>))}
+    <div className='min-h-screen transition-all duration-500 ease-out'>
+        <div className='w-1/4 min-h-screen bg-gray-100'>
+            {entries.map((entry)=>(<DataItem entry={entry} depth={1}/>))}
         </div>
     </div>
   )
