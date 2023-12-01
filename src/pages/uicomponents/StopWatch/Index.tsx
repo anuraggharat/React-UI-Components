@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 export default function StopWatch() {
-  const [count, setCount] = useState(0);
-  const [isRunning, setRunning] = useState(true);
+  const [count, setCount] = useState<number>(0);
+  const [isRunning, setRunning] = useState<boolean>(true);
 
-  let id:any;
+  let id:NodeJs.Timeout;
 
   useEffect(() => {
     if (isRunning) {
