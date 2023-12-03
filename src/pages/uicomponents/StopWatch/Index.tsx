@@ -4,7 +4,7 @@ export default function StopWatch() {
   const [count, setCount] = useState<number>(0);
   const [isRunning, setRunning] = useState<boolean>(true);
 
-  let id:NodeJs.Timeout;
+  let id:number;
 
   useEffect(() => {
     if (isRunning) {

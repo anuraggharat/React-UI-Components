@@ -8,9 +8,7 @@ function App() {
 
   
   return (
-      <Layout>
         <ApplicationRouting />
-      </Layout>
   )
 }
 

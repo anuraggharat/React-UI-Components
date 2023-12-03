@@ -1,13 +1,12 @@
 import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
 
-interface LayoutProps{
-    children : React.ReactNode
-}
 
-export default function Layout({children}:LayoutProps) {
+export default function Layout() {
   return (
-    <div className='min-h-screen w-full bg-slate-50'>
-        {children}
+    <div className='relative min-h-screen w-full'>
+        <Outlet />
+        <Link className='rounded-lg fixed top-5 left-5 p-2 bg-slate-200 border border-slate-400' to={'/'}>Go Back</Link>
     </div>
   )
 }
