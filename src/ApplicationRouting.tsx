@@ -8,6 +8,7 @@ import StopWatch from './pages/uicomponents/StopWatch/Index'
 import CustomerQueue from './pages/uicomponents/CustomerQueue/Index'
 import ProgressBar from './pages/uicomponents/ProgressBar/Index'
 import Layout from './components/Layout'
+import GridLights from './pages/uicomponents/GridLights/Index'
 
 export default function ApplicationRouting() {
   return (
@@ -22,6 +23,7 @@ export default function ApplicationRouting() {
           <Route element={<StopWatch />} path='/components/stopwatch' />
           <Route element={<CustomerQueue />} path='/components/customerqueue' />
           <Route element={<ProgressBar />} path='/components/progressbar' />
+          <Route element={<GridLights />} path='/components/gridlights' />
           </Route>
         </Routes>
       </Router>
