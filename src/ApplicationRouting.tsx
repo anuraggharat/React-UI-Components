@@ -9,6 +9,8 @@ import CustomerQueue from './pages/uicomponents/CustomerQueue/Index'
 import ProgressBar from './pages/uicomponents/ProgressBar/Index'
 import Layout from './components/Layout'
 import GridLights from './pages/uicomponents/GridLights/Index'
+import EMICalculator from './pages/smallapps/EMICalculator/Index'
+import ShoppingCart from './pages/uicomponents/ShoppingCart/Index'
 
 export default function ApplicationRouting() {
   return (
@@ -24,6 +26,9 @@ export default function ApplicationRouting() {
           <Route element={<CustomerQueue />} path='/components/customerqueue' />
           <Route element={<ProgressBar />} path='/components/progressbar' />
           <Route element={<GridLights />} path='/components/gridlights' />
+          <Route element={<ShoppingCart />} path='/components/shoppingcart' />
+          <Route element={<EMICalculator />} path='/smallapps/emicalculator' />
+
           </Route>
         </Routes>
       </Router>

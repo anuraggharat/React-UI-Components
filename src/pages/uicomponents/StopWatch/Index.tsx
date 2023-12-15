@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function StopWatch() {
   const [count, setCount] = useState<number>(0);
-  const [isRunning, setRunning] = useState<boolean>(true);
+  const [isRunning, setRunning] = useState<boolean>(false);
 
   let id:number;
 
