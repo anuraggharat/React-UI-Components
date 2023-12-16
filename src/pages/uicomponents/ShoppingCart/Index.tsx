@@ -1,16 +1,63 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 import Card from './components/Card'
-import PageButton from './components/PageButton'
+import CartSlider from './components/CartSlider'
+
+
+export interface Product{
+  id:string,
+  thumbnail:string,
+  title:string,
+  brand:string,
+  price:number,
+  description:string,
+  quantity?:number
+}
+interface Cart{
+  products:Product[],
+  total:number
+}
+
+const initialState:cart = {
+  products:[],
+  total:0
+}
+
+
+function reducer(initialState:Cart,action:any){
+  switch (action.type) {
+    case 'ADD_TO_CART':
+      const temp:Product[] = [...cart,{...product,quantity:1}]
+        setCart(temp)
+        if (!slider) {
+          setSlider(true)
+        }
+      break;
+    case 'UPDATE_TO_CART':
+      
+      break;
+    case 'DELETE_FROM_CART':
+      
+      break;
+    case 'ADD_TO_CART':
+      
+      break;
+  
+    default:
+      break;
+  }
+}
+
 
 export default function ShoppingCart() {
 
-    const [products,setProducts] = useState([])
-    const [page,setPage] = useState(1)
-
+    const [products,setProducts] = useState<Product[]>([])
+    //const [cart,setCart] = useState<Product[]>([])
+    const [slider,setSlider] = useState(false)
+    const [cart, dispatch] = useReducer(reducer,initialState)
 
     async function fetchProducts(){
         try {
-            const res = await fetch('https://dummyjson.com/products?limit=100')
+            const res = await fetch('https://dummyjson.com/products?limit=20')
             const data = await res.json()
             setProducts(data.products)            
         } catch (error) {
@@ -19,35 +66,40 @@ export default function ShoppingCart() {
     }
     useEffect(()=>{
         fetchProducts()
-    },[page])
+    },[])
 
+    function addToCart(product:Product):void{
+        
+    }
+    function updateCart(product:Product,increment:boolean=true){
+      const temp:Product[] = [...cart]
+        temp.forEach(item=>{
+          if (item.id === product.id && item.quantity) {
+            if (increment && item.quantity < 10 ) {
+              item.quantity = item.quantity + 1
+            }else if(!increment && item.quantity > 1){
+              item.quantity = item.quantity - 1
+            }
+          }
+        })
+        setCart(temp)
+      }
 
-    const handlePage=(newPage:number)=>{
-        if(newPage <1 || newPage > 10){
-            return 
-        }
-        setPage(newPage)
+    function deleteFromCart(id:string){
+        const temp:Product[] = [...cart]
+        const updatedProducts:Product[] = temp.filter(item=>item.id !== id)
+        setCart(updatedProducts)
     }
 
-    console.log(page)
     return (
-        <div className='bg-white min-h-screen p-12 lg:px-32 flex flex-col items-center'>
-            <div className='mt-20'>
-                <ul className='flex row justify-between items-center w-full gap-0'>
-                    <li className='p-2 px-4 border-[1px] border-gray-200' onClick={()=>handlePage(page-1)}>
-                    {"<"}
-                    </li>
-                    {[...Array(10).fill(1).map((_,index)=>index+1)].map((value)=><PageButton value={value} key={value} handlePage={handlePage} page={page} />)}
-                    <li className='p-2 px-4 border-[1px] border-gray-200' onClick={()=>handlePage(page+1)}>
-                    {">"}
-                    </li>
-                </ul>
-            </div>
+        <div className='bg-white min-h-screen relative p-12 lg:px-32 flex flex-col items-center'>
+            
             <div className='flex flex-row gap-3 flex-wrap mt-20'>
-                {products.slice(page*10-10,page*10).map((item:any)=>(
-                    <Card item={item} key={item.id} />
+                {products.map((item:Product)=>(
+                    <Card item={item} key={item.id} addToCart={addToCart} />
                 ))}
             </div>
+            {slider &&  <CartSlider cartItems={cart} deleteProduct={deleteFromCart} updateCart={updateCart}/>}
 
         </div>
   )
