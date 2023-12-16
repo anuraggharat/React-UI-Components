@@ -43,6 +43,9 @@ export default function Home() {
           <li className='text-blue-700 hover:text-blue-800 hover:underline transition-all duration-500'>
           <Link to={'/components/starrating'}>Star Rating</Link>
           </li>
+          <li className='text-blue-700 hover:text-blue-800 hover:underline transition-all duration-500'>
+          <Link to={'/components/accordian'}>Accordian</Link>
+          </li>
         </ul>
       </div>
 
