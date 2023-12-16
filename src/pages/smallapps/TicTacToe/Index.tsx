@@ -10,8 +10,6 @@ export default function Index() {
   const [draw,setDraw] = useState<boolean>(false)
   const [wonBoxes,setWonBoxes] = useState<number[]>([])
 
-
-
   const winningCombination = [
     [0,1,2],
     [0,4,8],

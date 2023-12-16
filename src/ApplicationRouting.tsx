@@ -12,6 +12,7 @@ import GridLights from './pages/uicomponents/GridLights/Index'
 import EMICalculator from './pages/smallapps/EMICalculator/Index'
 import ShoppingCart from './pages/uicomponents/ShoppingCart/Index'
 import TicTacToe from './pages/smallapps/TicTacToe/Index'
+import StarRating from './pages/uicomponents/starrating/Index'
 
 export default function ApplicationRouting() {
   return (
@@ -30,6 +31,8 @@ export default function ApplicationRouting() {
           <Route element={<ShoppingCart />} path='/components/shoppingcart' />
           <Route element={<EMICalculator />} path='/smallapps/emicalculator' />
           <Route element={<TicTacToe />} path='/smallapps/tictactoe' />
+          <Route element={<StarRating />} path='/components/starrating' />
+
 
 
           </Route>
