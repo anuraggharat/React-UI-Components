@@ -19,6 +19,7 @@ import TabMenu from './pages/uicomponents/TabMenu/Index'
 import SlideShow from './pages/uicomponents/SlideShow/Index'
 import AutoComplete from './pages/uicomponents/AutoComplete/Index'
 import InfiniteScroll from './pages/uicomponents/InfiniteScroll/Index'
+import CommentsSection from './pages/uicomponents/CommentsSection/Index'
 
 export default function ApplicationRouting() {
   return (
@@ -44,7 +45,7 @@ export default function ApplicationRouting() {
           <Route element={<SlideShow />} path='/components/slideshow' />
           <Route element={<AutoComplete />} path='/components/autocomplete' />
           <Route element={<InfiniteScroll />} path='/components/infinitescroll' />
-          <Route element={<InfiniteScroll />} path='/components/commentssection'/>
+          <Route element={<CommentsSection />} path='/components/commentssection'/>
           </Route>
         </Routes>
       </Router>
