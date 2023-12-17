@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 
-
 const linkLists = [
   {
       id:1,
@@ -63,18 +62,31 @@ const linkLists = [
     link:'/components/multitaginput'
   },
   {
-      id:101,
-      title:'Tic Tac Toe',
-      link:'/smallapps/tictactoe'
+    id:13,
+    title:'Mega Navbar',
+    link:'/components/meganavbar'
+  },
+  {
+    id:14,
+    title:'Slide Show',
+    link:'/components/slideshow'
+  },
+  {
+    id:15,
+    title:'Tab Component',
+    link:'/components/tabmenu'
+  },
+  {
+    id:101,
+    title:'Tic Tac Toe',
+    link:'/smallapps/tictactoe'
   },
   {
     id:102,
     title:'EMI calculator',
     link:'/smallapps/emicalculator'
 }
-
 ]
-
 
 export default function Home() {
   return (
@@ -89,7 +101,6 @@ export default function Home() {
           ))}
         </ul>
       </div>
-
     </div>
   )
 }

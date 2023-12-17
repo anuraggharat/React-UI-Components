@@ -5,7 +5,7 @@ import Tag from './components/Tag'
 export default function Index() {
 
     const [text,setText] = useState<string | number>('')
-    const [tags,setTags] = useState<(string|number)[]>(['react'])
+    const [tags,setTags] = useState<(string|number)[]>(['HTML','CSS','JavaScript'])
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) =>{
         setText(e.target.value)

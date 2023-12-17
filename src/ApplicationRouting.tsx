@@ -15,6 +15,7 @@ import TicTacToe from './pages/smallapps/TicTacToe/Index'
 import StarRating from './pages/uicomponents/starrating/Index'
 import Accordian from './pages/uicomponents/Accordian/Index'
 import MultiTagInput from './pages/uicomponents/MultiTagInput/Index'
+import TabMenu from './pages/uicomponents/TabMenu/Index'
 
 export default function ApplicationRouting() {
   return (
@@ -36,7 +37,7 @@ export default function ApplicationRouting() {
           <Route element={<StarRating />} path='/components/starrating' />
           <Route element={<Accordian />} path='/components/accordian' />
           <Route element={<MultiTagInput />} path='/components/multitaginput' />
-
+          <Route element={<TabMenu />} path='/components/tabmenu' />
 
 
 
