@@ -18,6 +18,7 @@ import MultiTagInput from './pages/uicomponents/MultiTagInput/Index'
 import TabMenu from './pages/uicomponents/TabMenu/Index'
 import SlideShow from './pages/uicomponents/SlideShow/Index'
 import AutoComplete from './pages/uicomponents/AutoComplete/Index'
+import InfiniteScroll from './pages/uicomponents/InfiniteScroll/Index'
 
 export default function ApplicationRouting() {
   return (
@@ -42,10 +43,8 @@ export default function ApplicationRouting() {
           <Route element={<TabMenu />} path='/components/tabmenu' />
           <Route element={<SlideShow />} path='/components/slideshow' />
           <Route element={<AutoComplete />} path='/components/autocomplete' />
-
-
-
-
+          <Route element={<InfiniteScroll />} path='/components/infinitescroll' />
+          <Route element={<InfiniteScroll />} path='/components/commentssection'/>
           </Route>
         </Routes>
       </Router>

@@ -82,6 +82,16 @@ const linkLists = [
     link:'/components/autocomplete'
   },
   {
+    id:17,
+    title:'Infinite Scroll',
+    link:'/components/infinitescroll'
+  },
+  {
+    id:18,
+    title:'Comments Section',
+    link:'/components/commentssection'
+  },
+  {
     id:101,
     title:'Tic Tac Toe',
     link:'/smallapps/tictactoe'
@@ -90,7 +100,7 @@ const linkLists = [
     id:102,
     title:'EMI calculator',
     link:'/smallapps/emicalculator'
-}
+  }
 ]
 
 export default function Home() {
