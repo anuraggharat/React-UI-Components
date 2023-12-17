@@ -14,6 +14,7 @@ import ShoppingCart from './pages/uicomponents/ShoppingCart/Index'
 import TicTacToe from './pages/smallapps/TicTacToe/Index'
 import StarRating from './pages/uicomponents/starrating/Index'
 import Accordian from './pages/uicomponents/Accordian/Index'
+import MultiTagInput from './pages/uicomponents/MultiTagInput/Index'
 
 export default function ApplicationRouting() {
   return (
@@ -34,6 +35,7 @@ export default function ApplicationRouting() {
           <Route element={<TicTacToe />} path='/smallapps/tictactoe' />
           <Route element={<StarRating />} path='/components/starrating' />
           <Route element={<Accordian />} path='/components/accordian' />
+          <Route element={<MultiTagInput />} path='/components/multitaginput' />
 
 
 
