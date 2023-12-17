@@ -77,6 +77,11 @@ const linkLists = [
     link:'/components/tabmenu'
   },
   {
+    id:16,
+    title:'Auto Complete',
+    link:'/components/autocomplete'
+  },
+  {
     id:101,
     title:'Tic Tac Toe',
     link:'/smallapps/tictactoe'
