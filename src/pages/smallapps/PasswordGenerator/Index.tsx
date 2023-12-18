@@ -12,6 +12,7 @@ export default function Index() {
         symbols:false
     })
     const {password,strength,error,generatePassword} = usePassword()
+    const [copied,setCopied] = useState(false)
 
     const onCheckboxChange = (e:ChangeEvent<HTMLInputElement>) => {
         setPasswordContains((oldPasswordContains)=>(
@@ -22,16 +23,24 @@ export default function Index() {
         ))
     }
 
+    const copyPassword = () =>{
+        setCopied(true)
+        navigator.clipboard.writeText(password)
+    }
+
   return (
     <CenteredLayout>
-        <div className='w-1/2 bg-white border-gray-200 border p-10 rounded flex flex-col gap-6 font-poppins'>
+        <div className='w-1/2 bg-white border-gray-300 border p-10 rounded flex flex-col gap-6 text-xl'>
             <div className='w-full flex flex-row  justify-between items-center'>
-                <p>{password}</p>
-                <button className='bg-blue-200 text-blue-600 py-4 px-6 rounded-md font-bold'>Copy</button>
+                <p className='text-3xl font-semibold'>{password}</p>
+                <button
+                    disabled={password === '' || error !==''}
+                    onClick={copyPassword} 
+                    className='bg-blue-100 text-blue-600 py-4 px-8 rounded-md font-semibold'>
+                        {copied ? 'Copied' : 'Copy Password'}
+                    </button>
             </div>
-            <div>
-                {error && <p>{error}</p>}
-            </div>
+
             <div className='w-full'>
                 <input type="range" name='length' className='w-full' min={0} max={16} value={length} onChange={(e)=>setLength(Number(e.target.value))} />
                 <div className='w-full flex flex-row justify-between mt-5'>
@@ -62,11 +71,13 @@ export default function Index() {
                 </div>
             </div>
             <div>
-                <p>Strength : {strength}</p>
-                {JSON.stringify(passwordContains)}
+                <p>Strength : <span  className='font-bold'>{strength}</span></p>
             </div>
             <div>
-                <button onClick={()=>generatePassword(length,passwordContains)} className='w-full p-4 bg-blue-200 font-bold rounded-md text-blue-800'>Generate</button>
+                {error && <p className='text-red-600'>{error}</p>}
+            </div>
+            <div>
+                <button onClick={()=>generatePassword(length,passwordContains)} className='w-full p-4 bg-blue-200 font-semibold rounded-md text-blue-800'>Generate</button>
             </div>
         </div>
     </CenteredLayout>

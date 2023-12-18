@@ -10,7 +10,7 @@ const usePassword = () => {
         let passwordString = '';
         setError("")
         if (length === 0 ) {
-            setError("Cannot create a password or Length 0")
+            setError("Cannot create a password of Length 0")
             return
         }
         for (const key in passwordContains) {
