@@ -102,7 +102,7 @@ const linkLists = [
     link:'/smallapps/emicalculator'
   },
   {
-    id:102,
+    id:103,
     title:'Password Generator',
     link:'/smallapps/passwordgenerator'
   }

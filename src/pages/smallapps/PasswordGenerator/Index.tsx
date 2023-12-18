@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import CenteredLayout from '../../../components/CenteredLayout'
 import usePassword from './hooks/usePasswordHook'
 
