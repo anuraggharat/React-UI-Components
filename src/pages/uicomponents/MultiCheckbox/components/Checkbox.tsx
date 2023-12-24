@@ -10,7 +10,7 @@ export default function Checkbox({item,values,handleCheck,parent}:any) {
         <input 
         type="checkbox" 
         id={item.make} 
-        checked={values[item.make]} 
+        checked={values[item.make] || false} 
         onChange={()=>handleCheck(item,parent)} />
         <label htmlFor={item.make}>{item.make}</label>
         <button onClick={()=>setAccordian(!accordian)}>
