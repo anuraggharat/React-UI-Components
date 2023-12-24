@@ -21,6 +21,7 @@ import AutoComplete from './pages/uicomponents/AutoComplete/Index'
 import InfiniteScroll from './pages/uicomponents/InfiniteScroll/Index'
 import CommentsSection from './pages/uicomponents/CommentsSection/Index'
 import PasswordGenerator from './pages/smallapps/PasswordGenerator/Index'
+import MultiCheckbox from './pages/uicomponents/MultiCheckbox/Parent'
 
 export default function ApplicationRouting() {
   return (
@@ -47,6 +48,7 @@ export default function ApplicationRouting() {
           <Route element={<AutoComplete />} path='/components/autocomplete' />
           <Route element={<InfiniteScroll />} path='/components/infinitescroll' />
           <Route element={<CommentsSection />} path='/components/commentssection'/>
+          <Route element={<MultiCheckbox />} path='/components/multicheckbox'/>
           <Route element={<PasswordGenerator />} path='/smallapps/passwordgenerator'/>
           </Route>
         </Routes>

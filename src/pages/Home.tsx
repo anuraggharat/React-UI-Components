@@ -92,6 +92,11 @@ const linkLists = [
     link:'/components/commentssection'
   },
   {
+    id:19,
+    title:'Multi Checkbox',
+    link:'/components/multicheckbox'
+  },
+  {
     id:101,
     title:'Tic Tac Toe',
     link:'/smallapps/tictactoe'
