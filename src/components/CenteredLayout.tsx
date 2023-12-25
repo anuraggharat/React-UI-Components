@@ -7,7 +7,7 @@ interface CenteredLayout {
 
 export default function CenteredLayout({children}:CenteredLayout) {
   return (
-    <div className='min-h-vh bg-white flex flex-col justify-center items-center py-20 font-poppins'>
+    <div className='min-h-vh bg-white flex flex-col justify-center items-center font-poppins'>
         {children}
     </div>
   )

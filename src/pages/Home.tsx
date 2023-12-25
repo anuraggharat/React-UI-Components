@@ -97,6 +97,11 @@ const linkLists = [
     link:'/components/multicheckbox'
   },
   {
+    id:20,
+    title:'Count Down Timer',
+    link:'/components/countdowntimer'
+  },
+  {
     id:101,
     title:'Tic Tac Toe',
     link:'/smallapps/tictactoe'

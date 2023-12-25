@@ -22,6 +22,8 @@ import InfiniteScroll from './pages/uicomponents/InfiniteScroll/Index'
 import CommentsSection from './pages/uicomponents/CommentsSection/Index'
 import PasswordGenerator from './pages/smallapps/PasswordGenerator/Index'
 import MultiCheckbox from './pages/uicomponents/MultiCheckbox/Parent'
+import CountDownTimer from './pages/uicomponents/CountDownTimer/CountDownTimer'
+import StopWatchType2 from './pages/uicomponents/StopWatchType2/Index'
 
 export default function ApplicationRouting() {
   return (
@@ -34,6 +36,7 @@ export default function ApplicationRouting() {
           <Route element={<CollapseFolders />} path='/components/collapseFolders' />
           <Route element={<Pagination />} path='/components/pagination' />
           <Route element={<StopWatch />} path='/components/stopwatch' />
+          <Route element={<StopWatchType2 />} path='/components/stopwatchtype2' />
           <Route element={<CustomerQueue />} path='/components/customerqueue' />
           <Route element={<ProgressBar />} path='/components/progressbar' />
           <Route element={<GridLights />} path='/components/gridlights' />
@@ -46,6 +49,7 @@ export default function ApplicationRouting() {
           <Route element={<TabMenu />} path='/components/tabmenu' />
           <Route element={<SlideShow />} path='/components/slideshow' />
           <Route element={<AutoComplete />} path='/components/autocomplete' />
+          <Route element={<CountDownTimer />} path='/components/countdowntimer' />
           <Route element={<InfiniteScroll />} path='/components/infinitescroll' />
           <Route element={<CommentsSection />} path='/components/commentssection'/>
           <Route element={<MultiCheckbox />} path='/components/multicheckbox'/>
