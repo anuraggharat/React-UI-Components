@@ -120,6 +120,10 @@ const linkLists = [
     id:103,
     title:'Password Generator',
     link:'/smallapps/passwordgenerator'
+  },{
+    id:201,
+    title:'Higher Order Components',
+    link:'/concepts/higherordercomponents'
   }
 ]
 

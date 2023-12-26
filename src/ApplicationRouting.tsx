@@ -24,6 +24,7 @@ import PasswordGenerator from './pages/smallapps/PasswordGenerator/Index'
 import MultiCheckbox from './pages/uicomponents/MultiCheckbox/Parent'
 import CountDownTimer from './pages/uicomponents/CountDownTimer/CountDownTimer'
 import StopWatchType2 from './pages/uicomponents/StopWatchType2/Index'
+import HigherOrderComponent from './pages/interviewconcepts/HigherOrderComp/Page'
 
 export default function ApplicationRouting() {
   return (
@@ -54,6 +55,12 @@ export default function ApplicationRouting() {
           <Route element={<CommentsSection />} path='/components/commentssection'/>
           <Route element={<MultiCheckbox />} path='/components/multicheckbox'/>
           <Route element={<PasswordGenerator />} path='/smallapps/passwordgenerator'/>
+
+
+
+
+          <Route element={<HigherOrderComponent />} path='/concepts/higherordercomponents'/>
+
           </Route>
         </Routes>
       </Router>
