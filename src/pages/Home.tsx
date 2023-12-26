@@ -105,7 +105,12 @@ const linkLists = [
     id:21,
     title:'Stop Watch Type2',
     link:'/components/stopwatchtype2'
-},
+  },
+  {
+    id:22,
+    title:'Multi Select List',
+    link:'/components/multiselectlist'
+  },
   {
     id:101,
     title:'Tic Tac Toe',

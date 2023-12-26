@@ -2,7 +2,7 @@ import withFetch from './WithFetch'
 
 function Users({data}:any) {
   return (
-    <div>
+    <div className='text-left'>
         <h1>Users</h1>
         {data.map((user:any)=>(<li key={user.id}>
             {user.name}

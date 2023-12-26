@@ -6,8 +6,10 @@ import Posts from './Components/Posts'
 export default function Page() {
   return (
     <CenteredLayout>
+        <div>
         <Users />
         <Posts />
+        </div>
     </CenteredLayout>
   )
 }
