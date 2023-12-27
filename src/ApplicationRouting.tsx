@@ -26,6 +26,7 @@ import CountDownTimer from './pages/uicomponents/CountDownTimer/CountDownTimer'
 import StopWatchType2 from './pages/uicomponents/StopWatchType2/Index'
 import HigherOrderComponent from './pages/interviewconcepts/HigherOrderComp/Page'
 import MultiSelectList from './pages/uicomponents/MultiSelecrList/Page'
+import DebouncedSearch from './pages/uicomponents/DebouncedSearch/Page'
 
 export default function ApplicationRouting() {
   return (
@@ -57,6 +58,8 @@ export default function ApplicationRouting() {
           <Route element={<MultiCheckbox />} path='/components/multicheckbox'/>
           <Route element={<PasswordGenerator />} path='/smallapps/passwordgenerator'/>
           <Route element={<MultiSelectList />} path='/components/multiselectlist'/>
+          <Route element={<DebouncedSearch />} path='/components/debouncedsearch'/>
+
 
 
 

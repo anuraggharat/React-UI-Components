@@ -112,6 +112,11 @@ const linkLists = [
     link:'/components/multiselectlist'
   },
   {
+    id:23,
+    title:'Debounced Search',
+    link:'/components/debouncedSearch'
+  },
+  {
     id:101,
     title:'Tic Tac Toe',
     link:'/smallapps/tictactoe'

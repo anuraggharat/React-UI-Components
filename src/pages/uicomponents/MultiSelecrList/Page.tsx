@@ -51,10 +51,10 @@ export default function Page() {
           </ul>
         </div>
         <div className='w-1/5 min-h-full  flex flex-col gap-3 justify-center items-center'>
-            <button onClick={selectAll} className='border border-gray-300 p-2 w-auto'>
+            <button disabled={options.length === 0} onClick={selectAll} className='border border-gray-300 p-2 w-auto'>
               <FaCaretRight />
             </button>
-            <button onClick={deselectAll} className='border border-gray-300 p-2 w-auto'>
+            <button disabled={selected.length===0} onClick={deselectAll} className='border border-gray-300 p-2 w-auto'>
               <FaCaretLeft />
             </button>
         </div>
